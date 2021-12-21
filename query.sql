@@ -1,0 +1,3 @@
+INSERT INTO ADICIONA_ARTIGO(CodBarra,NumTransacao)
+SELECT a.CodBarra,b.NumTransacao
+FROM ARTIGO a JOIN (SELECT * FROM TRANSACAO ORDER BY NumTransacao DESC LIMIT 1) b ON a.CodBarra = 1980;
